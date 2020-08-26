@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/layout/Header';
 import Todos from './components/Todos';
 import AddTodo from './components/AddTodo';
+import {v4 as uuid} from 'uuid';
 
 
 
@@ -12,17 +13,17 @@ class App extends Component {
   state = {
     todos: [
       {
-        id: 1,
+        id: uuid(),
         title: 'Learn React JS',
         completed: false
       },
       {
-        id: 2,
+        id: uuid(),
         title: 'Develop projects using React JS',
         completed: true
       },
       {
-        id: 3,
+        id: uuid(),
         title: 'Push on GitHub',
         completed: false
       }
@@ -47,7 +48,7 @@ delTodo = (id) => {
 //Add Todo
 addTodo = (title) => {
   const newTodo = {
-    id: 4,
+    id: uuid(),
     title, // es6 if key and value is same then just enter once the variable name once
     completed: false
   }
